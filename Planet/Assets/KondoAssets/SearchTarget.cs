@@ -29,7 +29,6 @@ public class SearchTarget : MonoBehaviour
         else
         {
             Vector3 randomVec = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
-            Debug.Log(randomVec);
             my_rb.AddForce(randomVec * followSpeed);//ˆÚ“®
         }
     }
