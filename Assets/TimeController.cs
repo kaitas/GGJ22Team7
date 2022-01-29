@@ -1,20 +1,29 @@
 using UnityEngine;
 
-public class TimeController : MonoBehaviour
+[System.Serializable]
+public class TimeController
 {
-    [SerializeField] private GameObject _lightObj;
-    public float _speed;
-    private float scroll = 0f, click = 0f;
-    void Start()
+    [SerializeField] DebugUIOperation _DebugUIOpe;
+    [SerializeField] GameObject _lightObj;
+    [SerializeField] float _timeRate = 30.0f;
+    [SerializeField] float _timespeed;
+    [SerializeField] float _scrollRate = 10;
+    private float _scroll = 0f;
+    float _totalTime;
+    public void Start()
     {
         _lightObj = GameObject.Find("Directional Light");//ƒ‰ƒCƒg‚Ì“ü‚ê–Y‚ê–hŽ~
     }
 
-    void Update()
+    public void Update()
     {
-        if (Input.GetMouseButtonDown(0)) click = 30;
-        scroll = Mathf.Sqrt(Input.mouseScrollDelta.y * Input.mouseScrollDelta.y) * 10;
-        _lightObj.transform.Rotate(new Vector3(_speed * Time.deltaTime + scroll + click, 0, 0));
-        click = 0;
+        float click_time_flo = 0.0f;
+        if (Input.GetMouseButtonDown(0)) { click_time_flo = _timeRate; }
+        _scroll = Mathf.Sqrt(Input.mouseScrollDelta.y * Input.mouseScrollDelta.y) * _scrollRate;
+        float time_now_frame = _timespeed * Time.deltaTime + _scroll + click_time_flo;
+        _totalTime += time_now_frame;
+        _lightObj.transform.Rotate(new Vector3(time_now_frame, 0, 0));
+
+        _DebugUIOpe.View_flo(_totalTime);
     }
 }
