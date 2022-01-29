@@ -14,6 +14,6 @@ public class DebugUIOperation
     //float‚ğ•\¦
     public void View_flo (float value)
     {
-        _debug_text.text = value.ToString();
+        _debug_text.text = "Date since the world began:"+value.ToString(); //¢ŠE‚ªn‚Ü‚Á‚Ä‚©‚ç‚Ì“ú•t
     }
 }
