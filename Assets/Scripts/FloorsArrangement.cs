@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorsArrangement : MonoBehaviour
+public class FloorsArrangement
 {
     public GameObject[] _floors;//ゲームオブジェクトの作成
     private float x, z;//変数
@@ -23,11 +21,5 @@ public class FloorsArrangement : MonoBehaviour
         z = (i + 1) / 100;
         if (x == 0) x = 100;
         _floors[i].gameObject.transform.position = new Vector3(x - 50, 6, z - 50);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

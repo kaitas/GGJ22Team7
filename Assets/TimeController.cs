@@ -7,9 +7,10 @@ public class TimeController
     [SerializeField] GameObject _lightObj;
     [SerializeField] float _timeRate = 30.0f;
     [SerializeField] float _timespeed;
-    [SerializeField] float _scrollRate = 10;
+    [SerializeField] float _scrollRate = 10.0f;
     private float _scroll = 0f;
     float _totalTime;
+    float _convert_Time_to_Day = 360.0f;
     public void Start()
     {
         _lightObj = GameObject.Find("Directional Light");//ƒ‰ƒCƒg‚Ì“ü‚ê–Y‚ê–hŽ~
@@ -24,6 +25,6 @@ public class TimeController
         _totalTime += time_now_frame;
         _lightObj.transform.Rotate(new Vector3(time_now_frame, 0, 0));
 
-        _DebugUIOpe.View_flo(_totalTime);
+        _DebugUIOpe.View_flo(_totalTime * (1.0f / _convert_Time_to_Day));
     }
 }
