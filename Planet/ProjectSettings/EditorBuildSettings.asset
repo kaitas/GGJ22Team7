@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/KondoScene.unity
-    guid: b954406487c78854dbdfc59557dce227
+    path: Assets/Scenes/HakasePlanet.unity
+    guid: 65360a20c444bf54dac0c1e1e00de1fd
   m_configObjects: {}
