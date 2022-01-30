@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class field : MonoBehaviour
+public class Field : MonoBehaviour
 {
     public int F;
     //1Šâê 2»”™ 3“y’n 4”ì—€‚È“y’n 5‘Œ´ 6X—Ñ 7ŠC 0Œš‘¢•¨

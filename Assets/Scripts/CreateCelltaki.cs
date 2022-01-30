@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateCell : MonoBehaviour
+public class CreateCelltaki : MonoBehaviour
 {
     public GameObject Cell;
 
@@ -28,6 +28,6 @@ public class CreateCell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
