@@ -16,7 +16,7 @@ public class Cell : MonoBehaviour
         //TestData.tsv を読んで配列 int _c[][] に格納
         //参考: https://note.com/macgyverthink/n/n83943f3bad60
         Debug.Log("tsvFile loading...");
-        _tsvFile = Resources.Load("TestData") as TextAsset; // Resouces下のTSV読み込み(拡張子はTestData.txtにする)
+        _tsvFile = Resources.Load("MapData") as TextAsset; // Resouces下のTSV読み込み(拡張子はTestData.txtにする)
         StringReader reader = new StringReader(_tsvFile.text);
 
         // \t で分割しつつ一行ずつ読み込み
