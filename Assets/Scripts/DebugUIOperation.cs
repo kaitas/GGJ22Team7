@@ -14,6 +14,6 @@ public class DebugUIOperation
     //floatを表示
     public void View_flo (float value)
     {
-        _debug_text.text = "Date since the world began:"+value.ToString(); //世界が始まってからの日付
+        _debug_text.text = "Wheel your sky. \n Date since the world began:"+value.ToString(); //世界が始まってからの日付
     }
 }

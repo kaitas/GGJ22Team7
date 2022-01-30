@@ -15,7 +15,7 @@ public class Cell : MonoBehaviour
     {
         //TestData.tsv を読んで配列 int _c[][] に格納
         //参考: https://note.com/macgyverthink/n/n83943f3bad60
-        Debug.Log("tsvFile loading...");
+        // Debug.Log("tsvFile loading...");
         _tsvFile = Resources.Load("MapData") as TextAsset; // Resouces下のTSV読み込み(拡張子はTestData.txtにする)
         StringReader reader = new StringReader(_tsvFile.text);
 
@@ -25,10 +25,10 @@ public class Cell : MonoBehaviour
         {
             string line = reader.ReadLine(); // 一行ずつ読み込み
             _tsvDatas.Add(line.Split('\t')); // タブ区切りでリストに追加
-            Debug.Log(line);
+            // Debug.Log(line);
         }
         // csvDatas[行][列]を指定して値を自由に取り出せる
-        Debug.Log(_tsvDatas[0][1]);
+        // Debug.Log(_tsvDatas[0][1]);
         // cに格納
 
     }
