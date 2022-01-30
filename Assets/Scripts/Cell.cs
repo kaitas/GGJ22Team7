@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,5 +38,33 @@ public class Cell : MonoBehaviour
     void Update()
     {
         
+=======
+using UnityEngine;
+
+/// <summary>
+/// 
+///  Cell‚Ì”’l‚ÌŠÇ—ƒNƒ‰ƒX
+/// 
+/// 2022-01-30
+/// tanoue kazuya
+/// </summary>
+[System.Serializable]
+public class Cell
+{
+    public int _type_int;
+    public Transform _cell_tra;
+    public bool isNoon;
+
+    public Cell (int _type_int, Transform _cell_tra)
+    {
+        this._type_int = _type_int;
+        this._cell_tra = _cell_tra;
+    }
+
+    public Cell(Cell Cell)
+    {
+        this._type_int = Cell._type_int;
+        this._cell_tra = Cell._cell_tra;
+>>>>>>> Stashed changes
     }
 }
