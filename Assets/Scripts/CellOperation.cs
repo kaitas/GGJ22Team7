@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// 
-///  ステージのCell関係の管理クラス
+///  ステージのCellParameter関係の管理クラス
 /// 
 /// 2022-01-30
 /// tanoue kazuya
@@ -14,7 +14,7 @@ public class CellOperation
 {
 
     [SerializeField] Transform _cells_parent;       //_cellsの親オブジェクト
-    [SerializeField] public List<Cell> _cells;
+    [SerializeField] public List<CellParameter> _cells;
     [SerializeField] int _cell_Length = 100;        //cellの合計の長さ
 
     [SerializeField] List<int> _cellsType_ints;
@@ -75,16 +75,16 @@ public class CellOperation
 
 
 
-    public List<Cell> GetCell_list(List<int> cell_type_ints)
+    public List<CellParameter> GetCell_list(List<int> cell_type_ints)
     {
-        List<Cell> return_list = new List<Cell>();
+        List<CellParameter> return_list = new List<CellParameter>();
         for (var i = 0; i < _cells_parent.childCount; i++)
         {
             Transform child = _cells_parent.GetChild(i);
             child.name = "floor_" + "(" + i + ")";
             Placement(i, child);
 
-            Cell tmp = new Cell(cell_type_ints[i], child);
+            CellParameter tmp = new CellParameter(cell_type_ints[i], child);
             return_list.Add(tmp);
         }
         return return_list;
