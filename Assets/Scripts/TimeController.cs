@@ -10,6 +10,8 @@ public class TimeController
     [SerializeField] float _scrollRate = 10.0f;
     private float _scroll = 0f;
     float _totalTime;
+    public float GetTotalTime() { return _totalTime; }
+
     float _convert_Time_to_Day = 360.0f;
     public void Start()
     {
@@ -22,9 +24,9 @@ public class TimeController
         if (Input.GetMouseButtonDown(0)) { click_time_flo = _timeRate; }
         _scroll = Mathf.Sqrt(Input.mouseScrollDelta.y * Input.mouseScrollDelta.y) * _scrollRate;
         float time_now_frame = _timespeed * Time.deltaTime + _scroll + click_time_flo;
-        _totalTime += time_now_frame;
         _lightObj.transform.Rotate(new Vector3(time_now_frame, 0, 0));
 
-        _DebugUIOpe.View_flo(_totalTime * (1.0f / _convert_Time_to_Day));
+        _totalTime += time_now_frame * (1.0f / _convert_Time_to_Day);
+        _DebugUIOpe.View_flo(_totalTime);
     }
 }
