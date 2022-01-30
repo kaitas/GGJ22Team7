@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
 /// 
-///  ƒQ[ƒ€is‚ÌŠÇ—ƒNƒ‰ƒX
+///  ã‚²ãƒ¼ãƒ é€²è¡Œã®ç®¡ç†ã‚¯ãƒ©ã‚¹
 /// 
-/// ‚½‚Ì‚¤‚¦
+/// ãŸã®ã†ãˆ
 /// 2022-01-29
 /// </summary>
 public class UpdateOperation : MonoBehaviour
 {
-    
-    [SerializeField] TimeController TimeController;     //‘€ì‚ÌŠÇ—ƒNƒ‰ƒX
-    [SerializeField] CellOperation CellOperation;       //ƒZƒ‹‚ÌŠÇ—ƒNƒ‰ƒX
-    
+
+    [SerializeField] TimeController TimeController;     //æ“ä½œã®ç®¡ç†ã‚¯ãƒ©ã‚¹
+    [SerializeField] CellOperation CellOperation;       //ã‚»ãƒ«ã®ç®¡ç†ã‚¯ãƒ©ã‚¹
+
     public float _totalTime;
-    
-    // Start is called before the first frame update
+
+// Start is called before the first frame update
     void Start()
     {
         TimeController.Start();
@@ -26,12 +26,12 @@ public class UpdateOperation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ƒvƒŒƒCƒ„[‚Ì‘€ì
+        //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®æ“ä½œ
         TimeController.Update();
-        //Œo‰ßŠÔ‚Ìæ“¾
+        //çµŒéæ™‚é–“ã®å–å¾—
         _totalTime = TimeController.GetTotalTime();
 
-        //ƒZƒ‹‚ÌŠÔ‚ÌXV
+        //ã‚»ãƒ«ã®æ™‚é–“ã®æ›´æ–°
         for (int i = 0; i < CellOperation._cells.Count; i++)
         {
             CellOperation.UpdateCellTime(i, _totalTime);
