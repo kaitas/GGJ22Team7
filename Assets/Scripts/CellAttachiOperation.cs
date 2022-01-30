@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 
+/// CellにMaterialをアサインするクラス
+/// 
+/// </summary>
 public class CellAttachiOperation : MonoBehaviour
 {
     // Start is called before the first frame update
