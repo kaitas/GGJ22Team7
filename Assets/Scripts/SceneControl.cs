@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneControl
+public class SceneControl : MonoBehaviour
 {
     /// <summary>
     /// シーンチェンジ関数
