@@ -8,7 +8,7 @@ public class Cell : MonoBehaviour
     // Cellを宣言
 //    public int[][] _c; //maxは仮です。重かったら調整。
     TextAsset _tsvFile; // TSVファイル
-    List<string[]> _tsvDatas = new List<string[]>(); // TSVの中身を入れるリスト;
+    public List<string[]> _tsvDatas = new List<string[]>(); // TSVの中身を入れるリスト;
 
     // Start is called before the first frame update
     void Start()
